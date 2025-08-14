@@ -10,7 +10,8 @@
 </svelte:head>
 
 <section>
-	<h1>
+	<!-- Adding tailwindCSS class -->
+	<h1 class="text-green-500">
 		<span class="welcome">
 			<picture>
 				<source srcset={welcome} type="image/webp" />
