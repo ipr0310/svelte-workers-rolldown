@@ -22,12 +22,12 @@ DEEP_SECRET=deepsecrethere
 
 ## Build Config
 
-There is a caveat, you must declare enviroment variables at `runtime` and `build`, otherwise build may no succeed
+There is a caveat, you must declare enviroment variables only at `build`, otherwise build may no succeed or variables not be correctly read
 
-### Runtime
-
-![Cloudflare Build](static/runtime-keys.png)
-
-### Build
+### Build (Declare it Here) ✅
 
 ![Cloudflare Build](static/cloudflare-build.png)
+
+### Runtime (Do NOT Declare it here) ❌
+
+![Cloudflare Build](static/runtime-keys.png)
