@@ -6,6 +6,7 @@ export function GET() {
 	return json({
 		publicKey: PUBLIC_API_KEY,
 		unencryptedSecret: FLAGS_SECRET,
-		cloudflareSecretKey: DEEP_SECRET
+		cloudflareSecretKey: DEEP_SECRET,
+		requestDate: new Date().getUTCMilliseconds()
 	});
 }

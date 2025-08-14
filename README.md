@@ -2,7 +2,9 @@
 
 Making demo for testing purposes :check:
 
-## Enviroment Variable Names
+## Enviroment Variable
+
+### Format
 
 For the sake of portability (and sanity), environment variable names must consist solely of letters, digits, and the underscore ( \_ ) and must not begin with a digit. In regex-speak, the names must match the following pattern:
 
@@ -17,3 +19,15 @@ PUBLIC_API_KEY=publicsecrethere
 FLAGS_SECRET=secrethere
 DEEP_SECRET=deepsecrethere
 ```
+
+## Build Config
+
+There is a caveat, you must declare enviroment variables at `runtime` and `build`, otherwise build may no succeed
+
+### Runtime
+
+![Cloudflare Build](static/runtime-keys.png)
+
+### Build
+
+![Cloudflare Build](static/cloudflare-build.png)
