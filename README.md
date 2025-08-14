@@ -1,3 +1,3 @@
-# Sveltekit + Rolldown + Cloudflare Workers
+# Sveltekit + Rolldown + Cloudflare Workers ✅
 
-Making demo for testing purposes
+Making demo for testing purposes :check:
