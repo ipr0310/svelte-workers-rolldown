@@ -25,14 +25,45 @@ DYNAMIC_SECRET=deepsecrethere
 ENCRYPTED_DYNAMIC_SECRET=deepsecrethere
 ```
 
+## Declaring Enviroment Variables
+
+There is a caveat, you are able to declare enviroment variables at `runtime` or `build`
+
+### Build
+
+When you declare variables at `build`, the only way to access it is by importing the enviroment variables the following way:
+
+```javascript
+import { PUBLIC_API_KEY } from '$env/static/public';
+import { FLAGS_SECRET, DEEP_SECRET } from '$env/static/private';
+
+export function GET() {
+	return json({
+		publicKey: PUBLIC_API_KEY,
+		unencryptedSecret: FLAGS_SECRET,
+		cloudflareEncryptedSecretKey: DEEP_SECRET,
+		requestDate: new Date().getUTCMilliseconds()
+	});
+}
+```
+
+### Runtime
+
+![Cloudflare Build](static/cloudflare-runtime-variables.png)
+
+When you declare variables at `runtime`, the only way to access it is by importing the enviroment variables the following way:
+
+```javascript
+import { env } from '$env/dynamic/private';
+
+export function GET() {
+	return json({
+		unencrypted: env.DYNAMIC_SECRET,
+		cloudflareEncryptedDyanmicKey: env.ENCRYPTED_DYNAMIC_SECRET
+	});
+}
+```
+
 ## Build Config
 
-There is a caveat, you must declare enviroment variables only at `build`, otherwise build may no succeed or variables not be correctly read
-
-### Build (Declare it Here) ✅
-
 ![Cloudflare Build](static/cloudflare-build.png)
-
-### Runtime (Do NOT Declare it here) ❌
-
-![Cloudflare Build](static/runtime-keys.png)
