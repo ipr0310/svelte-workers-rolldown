@@ -31,7 +31,7 @@ There is a caveat, you are able to declare enviroment variables at `runtime` or 
 
 ### Build
 
-When you declare variables at `build`, the only way to access it is by importing the enviroment variables the following way:
+When you declare variables at `build`, the only way to access it is by importing the `static` enviroment variables the following way:
 
 ```javascript
 import { PUBLIC_API_KEY } from '$env/static/public';
@@ -51,7 +51,7 @@ export function GET() {
 
 ![Cloudflare Build](static/cloudflare-runtime-variables.png)
 
-When you declare variables at `runtime`, the only way to access it is by importing the enviroment variables the following way:
+When you declare variables at `runtime`, the only way to access it is by importing the `dynamic` enviroment variables the following way:
 
 ```javascript
 import { env } from '$env/dynamic/private';
