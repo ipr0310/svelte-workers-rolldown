@@ -15,10 +15,12 @@ For the sake of portability (and sanity), environment variable names must consis
 ### Example
 
 ```yaml
+# Static
 PUBLIC_API_KEY=publicsecrethere
 FLAGS_SECRET=secrethere
 DEEP_SECRET=deepsecrethere
 
+# Dynamic
 DYNAMIC_SECRET=deepsecrethere
 ENCRYPTED_DYNAMIC_SECRET=deepsecrethere
 ```
