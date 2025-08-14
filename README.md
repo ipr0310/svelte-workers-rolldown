@@ -18,6 +18,9 @@ For the sake of portability (and sanity), environment variable names must consis
 PUBLIC_API_KEY=publicsecrethere
 FLAGS_SECRET=secrethere
 DEEP_SECRET=deepsecrethere
+
+DYNAMIC_SECRET=deepsecrethere
+ENCRYPTED_DYNAMIC_SECRET=deepsecrethere
 ```
 
 ## Build Config
