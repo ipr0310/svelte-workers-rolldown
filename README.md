@@ -9,3 +9,11 @@ For the sake of portability (and sanity), environment variable names must consis
 ```re
 [a-zA-Z_]+[a-zA-Z0-9_]\*
 ```
+
+### Example
+
+```yaml
+PUBLIC_API_KEY=publicsecrethere
+FLAGS_SECRET=secrethere
+DEEP_SECRET=deepsecrethere
+```
